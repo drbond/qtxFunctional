@@ -1,0 +1,4 @@
+index.js
+*.js.map
+build/
+__pycache__/

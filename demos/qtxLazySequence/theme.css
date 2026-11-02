@@ -1,0 +1,976 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css');
+
+:root {
+  --corner-radius:    4px;
+  --listmenu-radius:  8px;
+
+  /* Decorative: brand accent gradient */
+  --decorative-dark:  #2B5897;
+  --decorative-light: #5B88C7;
+  --decorative-deep:  #293D69;
+
+  /* Tool: dark chrome gradient */
+  --tool-light:    #5C5B56;
+  --tool-dark:     #393834;
+  --tool-mid:      #474642;
+  --tool-border:   #353431;
+  --tool-display:  #333333;
+
+  /* Surface: warm parchment */
+  --surface-form:      #EFEBE7;
+  --surface-container: #F5F2EF;
+  --surface-control:   #f8f8f8;
+
+  /* Basic: neutral control gradient range */
+  --basic-white:  #FFFFFF;
+  --basic-light:  #F0F0F0;
+  --basic-active: #E7E7E7;
+  --basic-soft:   #ededed;
+  --basic-dialog: #E0E0E0;
+  --basic-muted:  #CCCCCC;
+  
+  /* Font colors for this theme */
+  --font-color-widget: #000000;
+  --font-color-edit: #000000;
+  --font-color-tool: #FFFFFF;
+  --font-color-soft: #ACACAC;
+  --font-color-soft-tool: #444444;
+  --font-color-mark: #F90000;
+  --font-color-mark-tool: #F9F900;
+  
+  /* Font sizes for this theme */
+  --font-size-tiny: 8pt;
+  --font-size-small: 10pt;
+  --font-size-normal: 12pt;
+  --font-size-medium: 16pt;
+  --font-size-large: 20pt;
+  --font-size-huge: 24pt;
+  --font-size-max: 32pt;
+}
+
+:focus {
+  outline-width: 0;
+  outline-color: transparent;
+  outline-style: none
+}
+
+* {
+  -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+  cursor: default;
+}
+
+div, input, span, button {
+  cursor:  default;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+
+  -webkit-box-sizing: border-box !important;
+     -moz-box-sizing: border-box !important;
+     -o-box-sizing: border-box !important;
+      box-sizing: border-box !important;
+
+  -webkit-tap-highlight-color: transparent;
+     -moz-tap-highlight-color: transparent;
+     -o-tap-highlight-color: transparent;
+      tap-highlight-color: transparent;
+
+  -webkit-font-smoothing: always;
+     -moz-font-smoothing: always;
+      font-smoothing: always;
+
+  -webkit-text-size-adjust: auto;
+     -moz-text-size-adjust: auto;
+     -o-text-size-adjust: auto;
+
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+        user-select: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Ubuntu, Verdana, Sans-Serif;
+  font-size: 11pt;
+  overscroll-behavior: contain;
+  overflow: hidden;
+}
+
+/* ########################################################################## */
+/* QTXDisabled                                                                */
+/* ########################################################################## */
+
+.QTXDisabled {
+  cursor:         not-allowed !Important;
+  touch-action:   none !Important;
+  outline:        none !Important;
+  pointer-events: none !Important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat !Important;
+}
+
+.QTXDisabled >* {
+  opacity:        0.5 !Important;
+  cursor:         not-allowed !Important;
+  touch-action:   none !Important;
+  outline:        none !Important;
+  pointer-events: none !Important;
+  color: #000000;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat !Important;
+}
+
+/* ############################################### */
+/* Font control values                             */
+/* ############################################### */
+
+.FontShadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+}
+
+.FontOutline {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.ParentFont {
+  font-family:  inherit; !important;
+}
+
+.ParentColor {
+  color: inherit;
+}
+
+/* ############################################### */
+/* STANDARD BACKGROUND TYPES                       */
+/* ############################################### */
+
+.ParentBackground {
+  background: inherit;
+  background-color: inherit;
+  background-image: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+}
+
+.QTXToolWidgetBackground {
+  background-color: var(--tool-mid)
+}
+
+.QTXDisplayBackground {
+  background-color: var(--tool-display)
+}
+
+.QTXControlBackground {
+  background-color: var(--surface-control)
+}
+
+.QTXContainerBackground {
+  background-color: var(--surface-container);
+}
+
+.QTXEditBackground {
+  background-color: var(--basic-white)
+}
+
+.QTXListBackground {
+  background-color: var(--surface-container);
+}
+
+.QTXListItemBackground {
+  background-color: var(--basic-white);
+}
+
+.QTXListItemSelectedBackground {
+  background-color: rgba(239, 239, 239, .9) !important;
+}
+
+.QTXButtonBackground {
+  background-color: var(--surface-control);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--basic-white)), color-stop(100, var(--basic-light)));
+  background-image: -webkit-linear-gradient(top, var(--basic-white) 0%, var(--basic-light) 100%);
+  background-image: -moz-linear-gradient(top, var(--basic-white) 0%, var(--basic-light) 100%);
+  background-image: linear-gradient(to bottom, var(--basic-white) 0%, var(--basic-light) 100%)
+}
+
+.QTXButtonBackground:active {
+  background-color: var(--basic-soft);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--basic-active)), color-stop(100, var(--basic-white)));
+  background-image: -webkit-linear-gradient(top, var(--basic-active) 0%, var(--basic-white) 100%);
+  background-image: -moz-linear-gradient(top, var(--basic-active) 0%, var(--basic-white) 100%);
+  background-image: linear-gradient(to bottom, var(--basic-active) 0%, var(--basic-white) 100%)
+}
+
+.QTXDialogButtonBackground {
+  background-color: var(--surface-control);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--basic-dialog)), color-stop(100, var(--basic-muted)));
+  background-image: -webkit-linear-gradient(top, var(--basic-dialog) 0%, var(--basic-muted) 100%);
+  background-image: -moz-linear-gradient(top, var(--basic-dialog) 0%, var(--basic-muted) 100%);
+  background-image: linear-gradient(to bottom, var(--basic-dialog) 0%, var(--basic-muted) 100%)
+}
+
+.QTXDialogButtonBackground:active {
+  background-color: var(--basic-soft);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--basic-muted)), color-stop(100, var(--basic-dialog)));
+  background-image: -webkit-linear-gradient(top, var(--basic-muted) 0%, var(--basic-dialog) 100%);
+  background-image: -moz-linear-gradient(top, var(--basic-muted) 0%, var(--basic-dialog) 100%);
+  background-image: linear-gradient(to bottom, var(--basic-muted) 0%, var(--basic-dialog) 100%)
+}
+
+.QTXDecorativeBackground {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--decorative-dark)), color-stop(100, var(--decorative-light))) !important;
+  background-image: -webkit-linear-gradient(top, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important;
+  background-image: -moz-linear-gradient(top, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important;
+  background-image: linear-gradient(to bottom, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important
+}
+
+.QTXDecorativeBackgroundInvert {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--decorative-light)), color-stop(100, var(--decorative-dark))) !important;
+  background-image: -webkit-linear-gradient(top, var(--decorative-light) 0%, var(--decorative-dark) 100%) !important;
+  background-image: -moz-linear-gradient(top, var(--decorative-light) 0%, var(--decorative-dark) 100%) !important;
+  background-image: linear-gradient(to bottom, var(--decorative-light) 0%, var(--decorative-dark) 100%) !important
+}
+
+.QTXDecorativeDarkBackground {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000), color-stop(100, var(--decorative-deep)));
+  background-image: -webkit-linear-gradient(top, #000 0%, var(--decorative-deep) 100%);
+  background-image: -moz-linear-gradient(top, #000 0%, var(--decorative-deep) 100%);
+  background-image: linear-gradient(to bottom, #000 0%, var(--decorative-deep) 100%)
+}
+
+.QTXToolContainerBackground {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--tool-light)), color-stop(100, var(--tool-dark)));
+  background-image: -webkit-linear-gradient(top, var(--tool-light) 0%, var(--tool-dark) 100%);
+  background-image: -moz-linear-gradient(top, var(--tool-light) 0%, var(--tool-dark) 100%);
+  background-image: linear-gradient(to bottom, var(--tool-light) 0%, var(--tool-dark) 100%)
+}
+
+.QTXToolButtonBackground {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--tool-light)), color-stop(100, var(--tool-dark)));
+  background-image: -webkit-linear-gradient(top, var(--tool-light) 0%, var(--tool-dark) 100%);
+  background-image: -moz-linear-gradient(top, var(--tool-light) 0%, var(--tool-dark) 100%);
+  background-image: linear-gradient(to bottom, var(--tool-light) 0%, var(--tool-dark) 100%)
+}
+
+.QTXToolButtonBackground:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--tool-dark)), color-stop(100, var(--tool-light)));
+  background-image: -webkit-linear-gradient(top, var(--tool-dark) 0%, var(--tool-light) 100%);
+  background-image: -moz-linear-gradient(top, var(--tool-dark) 0%, var(--tool-light) 100%);
+  background-image: linear-gradient(to bottom, var(--tool-dark) 0%, var(--tool-light) 100%)
+}
+
+/* ############################################### */
+/* STANDARD WIDGET BORDERS                         */
+/* ############################################### */
+
+.QTXBorderNone {
+  -webkit-border-style: none;
+     -moz-border-style: none;
+       -o-border-style: none;
+        border-style: none;
+}
+
+.QTXWidgetBorder {
+  border-radius: var(--corner-radius);
+  border: 1px solid var(--basic-soft);
+  -webkit-box-shadow: 0 1px #FFF;
+     -moz-box-shadow: 0 1px #FFF;
+       -o-box-shadow: 0 1px #FFF;
+          box-shadow: 0 1px #FFF
+}
+
+.QTXContainerBorder {
+  border-radius: var(--corner-radius);
+  border-top:    1px solid rgba(250, 250, 250, .7);
+  border-left:   1px solid rgba(250, 250, 250, .7);
+  border-right:  1px solid rgba(240, 240, 240, .5);
+  border-bottom: 1px solid rgba(240, 240, 240, .5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+     -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+       -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+          box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3)
+}
+
+.QTXFlatBorder {
+  border-radius: var(--corner-radius);
+  border-top:    1px solid rgba(44, 44, 44, .8);
+  border-left:   1px solid rgba(44, 44, 44, .8);
+  border-right:  1px solid rgba(44, 44, 44, .8);
+  border-bottom: 1px solid rgba(44, 44, 44, .8)
+}
+
+.QTXButtonBorder {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid rgba(250, 250, 250, .7);
+  border-left: 1px solid rgba(250, 250, 250, .7);
+  border-right: 1px solid rgba(240, 240, 240, .5);
+  border-bottom: 1px solid rgba(240, 240, 240, .5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8)
+}
+
+.QTXButtonBorder:active {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid rgba(240, 240, 240, .5);
+  border-left: 1px solid rgba(240, 240, 240, .5);
+  border-right: 1px solid rgba(250, 250, 250, .7);
+  border-bottom: 1px solid rgba(250, 250, 250, .7);
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8)
+}
+
+.QTXDialogButtonBorder {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid rgba(250, 250, 250, .7);
+  border-left: 1px solid rgba(250, 250, 250, .7);
+  border-right: 1px solid rgba(240, 240, 240, .5);
+  border-bottom: 1px solid rgba(240, 240, 240, .5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8)
+}
+
+.QTXDialogButtonBorder:active {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid rgba(240, 240, 240, .5);
+  border-left: 1px solid rgba(240, 240, 240, .5);
+  border-right: 1px solid rgba(250, 250, 250, .7);
+  border-bottom: 1px solid rgba(250, 250, 250, .7);
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8);
+  box-shadow: 0 0 1px 1px rgba(81, 81, 81, .8)
+}
+
+.QTXEditBorder {
+  border-top: 1px solid #979797;
+  border-left: 1px solid #979797;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  -webkit-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  -moz-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  -o-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  box-shadow: inset 0 0 3px rgba(18, 18, 18, .6)
+}
+
+.QTXListBorder {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid #979797;
+  border-left: 1px solid #979797;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  -webkit-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  -moz-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  -o-box-shadow: inset 0 0 3px rgba(18, 18, 18, .6);
+  box-shadow: inset 0 0 3px rgba(18, 18, 18, .6)
+}
+
+.QTXToolWidgetFlatBorder {
+  border-top: 1px solid rgba(44, 44, 44, .7);
+  border-left: 1px solid rgba(44, 44, 44, .7);
+  border-right: 1px solid rgba(44, 44, 44, .7);
+  border-bottom: 1px solid rgba(44, 44, 44, .7)
+}
+
+.QTXToolWidgetBorder {
+  border: 1px solid var(--tool-border)
+}
+
+.QTXToolContainerBorder {
+  border-top: 1px solid rgba(33, 33, 33, .7);
+  border-left: 1px solid rgba(33, 33, 33, .7);
+  border-right: 1px solid rgba(33, 33, 33, .7);
+  border-bottom: 1px solid rgba(33, 33, 33, .7);
+  -webkit-box-shadow: 0 1px 1px rgba(33, 33, 33, .4);
+  -moz-box-shadow: 0 1px 1px rgba(33, 33, 33, .4);
+  -o-box-shadow: 0 1px 1px rgba(33, 33, 33, .4);
+  box-shadow: 0 1px 1px rgba(33, 33, 33, .4)
+}
+
+.QTXToolButtonBorder {
+  border-radius: var(--corner-radius);
+  border-top: 1px solid rgba(250, 250, 250, .7);
+  border-left: 1px solid rgba(250, 250, 250, .7);
+  border-right: 1px solid rgba(220, 220, 220, .5);
+  border-bottom: 1px solid rgba(220, 220, 220, .5);
+  -webkit-box-shadow: 1px 1px 0 0 rgba(33, 33, 33, .9);
+  -moz-box-shadow: 1px 1px 0 0 rgba(33, 33, 33, .9);
+  -o-box-shadow: 1px 1px 0 0 rgba(33, 33, 33, .9);
+  box-shadow: 1px 1px 0 0 rgba(33, 33, 33, .9)
+}
+
+.QTXToolButtonBorder:active {
+  border-top: 1px solid rgba(250, 250, 250, .5);
+  border-left: 1px solid rgba(250, 250, 250, .5);
+  border-right: 1px solid rgba(220, 220, 220, .7);
+  border-bottom: 1px solid rgba(220, 220, 220, .7);
+  -webkit-box-shadow: 0 0 1px 1px rgba(33, 33, 33, .9);
+  -moz-box-shadow: 0 0 1px 1px rgba(33, 33, 33, .9);
+  -o-box-shadow: 0 0 1px 1px rgba(33, 33, 33, .9);
+  box-shadow: 0 0 1px 1px rgba(33, 33, 33, .9)
+}
+
+.QTXDecorativeBorder {
+  border-radius: var(--corner-radius);
+  border: 1px solid #AAA;
+  -webkit-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  -moz-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  -o-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  box-shadow: inset 0 0 10px rgba(18, 18, 18, .9)
+}
+
+.QTXListMenuBorder {
+  -webkit-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+  -moz-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+  -o-box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3);
+  box-shadow: 0 0 1px 1px rgba(81, 81, 81, .3)
+}
+
+.QTXListMenuBorder:active {
+  border: 1px solid #AAA;
+  -webkit-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  -moz-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  -o-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+  box-shadow: inset 0 0 10px rgba(18, 18, 18, .9)
+}
+
+.QTXListMenuBorder:first-child {
+  border-top-left-radius: var(--listmenu-radius);
+  border-top-right-radius: var(--listmenu-radius);
+}
+
+.QTXListMenuBorder:last-child {
+  border-bottom-left-radius: var(--listmenu-radius);
+  border-bottom-right-radius: var(--listmenu-radius);
+}
+
+.TQTXDOMIFrame {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ########################################################################## */
+/* TQTXMainMenu                                                               */
+/* ########################################################################## */
+
+.TQTXMenuHeaderLogo {
+  width: 28px !important;
+  height: 100%;
+  padding: 2px;
+}
+
+.TQTXMainMenu {
+   color: #000000;
+   border-style: solid;
+   border-top-width: 1px;
+   border-top-color: #626262;
+   border-bottom-width: 1px;
+   border-bottom-color: #626262;
+   background: #EEEEEE;
+   background: linear-gradient(#EEEEEE, #D2D2D2);
+   Height: 28px !important;
+}
+
+ .TQTXMenuHeader {
+    padding: 2px;
+    height: 100% !important;
+    border-left: 1px solid rgba(255,255,255, .3);
+    border-top: 1px solid rgba(255,255,255, .3);
+    border-right: 1px solid rgba(0,0,0, .3);
+ }
+
+ .TQTXMenuContainer {
+    border-top: 1px solid rgba(255,255,255, .3);
+    border-bottom: 1px solid rgba(0,0,0, .3);
+    border-right: 1px solid rgba(0,0,0, .3);
+    background-color: #DFDFDF;
+    -webkit-box-shadow: 3px 4px 6px 1px rgba(0,0,0, .2);
+       -moz-box-shadow: 3px 4px 6px 1px rgba(0,0,0, .2);
+         -o-box-shadow: 3px 4px 6px 1px rgba(0,0,0, .2);
+            box-shadow: 3px 4px 6px 1px rgba(0,0,0, .2);
+  }
+
+.TQTXMenuText {
+  color: inherit;
+  margin-left: 2px;
+  margin-right: 2px;
+  line-height: 1.5;
+}
+
+.TQTXMenuItem {
+  border-bottom: 1px dotted rgba(0,0,0, .3);
+  height: 28px !important;
+  padding-left: 2px;
+}
+
+.TQTXMenuItem:hover {
+  color: blue;
+}
+
+.TQTXMenuGlyph {
+  margin-top: 2px;
+  border: 1px dotted rgba(0,0,0, .3);
+  width: 22px;
+  height: 23px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat !Important;
+}
+
+/* ########################################################################## */
+/* TQTXDisplay                                                                */
+/* ########################################################################## */
+
+.TQTXDisplay {
+}
+
+/* ########################################################################## */
+/* TQTXViewPort                                                               */
+/* ########################################################################## */
+
+.TQTXViewPort {
+}
+
+/* ########################################################################## */
+/* TQTXWidget                                                                 */
+/* ########################################################################## */
+
+.TQTXWidget {
+}
+
+/* ########################################################################## */
+/* TQTXTabPage                                                                */
+/* ########################################################################## */
+
+.TQTXTabPage {
+  webkitOverflowScrolling: "touch";
+   mozOverflowScrolling: "touch";
+    overflowScrolling: "touch";
+}
+
+.TQTXTabHeaders::-webkit-scrollbar {
+  display: none !important;
+}
+
+.TQTXTabHeaders {
+  scrollbar-width: none !important;
+}
+
+.TQTXTabHeaderNavigator {
+  -webkit-box-shadow: -1px 1px 2px 2px rgba(0,0,0, .2);
+  -moz-box-shadow: -1px 1px 2px 2px rgba(0,0,0, .2);
+  -o-box-shadow: -1px 1px 2px 2px rgba(0,0,0, .2);
+  box-shadow: -1px 1px 2px 2px rgba(0,0,0, .2);
+ }
+
+/* ########################################################################## */
+/* TQTXRegionSelector                                                         */
+/* ########################################################################## */
+
+.TQTXRegionSelector {
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: rgba(0,0,0, .1) !important;
+}
+
+/* ########################################################################## */
+/* TQTXFlowPanel                                                                 */
+/* ########################################################################## */
+
+.QTXFlowColumn {
+  float: left;
+  padding: 2px;
+  height: 100%;
+}
+
+.QTXFlowRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ########################################################################## */
+/* TQTXContentBox                                                             */
+/* ########################################################################## */
+
+.TQTXContentBox {
+  display: flex !important;
+  white-space: nowrap;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  min-height: 3px;
+}
+
+/* ########################################################################## */
+/* TQTXForm                                                                   */
+/* ########################################################################## */
+
+.TQTXForm {
+  /* padding: 2px; */
+  background-color: var(--surface-form);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0)
+}
+
+/* ########################################################################## */
+/* TQTXEdit                                                                   */
+/* ########################################################################## */
+
+.TQTXEdit {
+  padding: 2px;
+  resize: none;
+  font-size: 14px;
+  -webkit-user-select: text; !important;
+  -moz-user-select: text;  !important;
+  -o-user-select: text;  !important;
+  user-select: text  !important;
+}
+
+/* ########################################################################## */
+/* TQTXMemo                                                                   */
+/* ########################################################################## */
+
+.TQTXMemo {
+  padding: 2px;
+  resize: none;
+  -webkit-user-select: text; !important;
+  -moz-user-select: text;  !important;
+  -o-user-select: text;  !important;
+  user-select: text  !important;
+}
+
+/* ########################################################################## */
+/* TQTXComboBox                                                               */
+/* ########################################################################## */
+
+.TQTXComboBox {
+  padding: 2px;
+  resize: none;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto
+}
+
+/* ########################################################################## */
+/* TQTXPanel                                                                  */
+/* ########################################################################## */
+
+.TQTXPanel {
+  padding: 2px;
+  background-color: rgba(255,255,255, 0.3);
+}
+
+/* ########################################################################## */
+/* TQTXImage                                                                */
+/* ########################################################################## */
+
+.TQTXImage {
+  padding: 0 !important;
+}
+
+/* ########################################################################## */
+/* TQTXLabel                                                                */
+/* ########################################################################## */
+
+.TQTXLabel {
+  padding: 0 !important;
+}
+
+.TQTXLabelContent {
+  white-space: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ########################################################################## */
+/* TQTXGroupBox                                                                */
+/* ########################################################################## */
+
+.TQTXGroupBox {
+  padding: 2px;
+  font-family: "Ubuntu", verdana, Helvetica;
+  font-name: "Ubuntu";
+  font-size: 14px
+}
+
+/* ########################################################################## */
+/* TQTXListBox                                                                */
+/* ########################################################################## */
+
+.TQTXListBox {
+  padding: 2px;
+  margin: 0;
+}
+
+.TQTXListBoxItem {
+  padding: 2px;
+  color: #000000;
+}
+
+.TQTXListItemSelected {
+  color: #FFFFFF !important;
+  background-color: var(--decorative-light);
+}
+
+.TQTXListItemText {
+  display: flex !important;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center !important;
+  flex-direction: column !important;
+  width: 100%;
+  text-align: center;
+  min-height: 16px;
+}
+
+/* ########################################################################## */
+/* TQTXButton                                                                 */
+/* ########################################################################## */
+
+.TQTXButton {
+  font-weight: bold;
+  color: #494949;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+}
+
+.TQTXButton:active:enabled {
+  color: #494949;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 1)
+}
+
+/* ########################################################################## */
+/* TQTXHeaderButton                                                           */
+/* ########################################################################## */
+
+.TQTXGlyphText {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-shadow: inherit;
+}
+
+.TQTXGlyphContainer {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-shadow: inherit;
+}
+
+/* ########################################################################## */
+/* TQTXDialogButton                                                           */
+/* ########################################################################## */
+
+.TQTXDialogButton {
+  min-width: 80px;
+  min-height: 32px;
+  margin: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #494949;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, .8)
+}
+
+.TQTXDialogButton:active:enabled {
+  color: #494949;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .8)
+}
+
+.TQTXDialogButton >* {
+  font-family: inherit !important;
+  font-name: inherit !important;
+  font-size: inherit !important
+}
+
+/* ########################################################################## */
+/* TQTXDialog                                                                 */
+/* ########################################################################## */
+
+.TQTXDialog {
+  padding: 0;
+  border-radius: 8px;
+  z-index: 2000; !Important;
+  box-shadow: 0 8px 19px rgba(0, 0, 0, .9)
+}
+
+/* ########################################################################## */
+/* TQTXListView                                                                */
+/* ########################################################################## */
+
+.TQTXListView {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.TQTXListView >* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ########################################################################## */
+/* TQTXToolbar                                                                */
+/* ########################################################################## */
+
+.TQTXToolbar {
+  padding: 2px;
+  color: #FFF;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  -webkit-box-shadow: 0 -1px 2px rgba(18, 18, 18, .4);
+  -moz-box-shadow: 0 -1px 2px rgba(18, 18, 18, .4);
+  -o-box-shadow: 0 -1px 2px rgba(18, 18, 18, .4);
+  box-shadow: 0 -1px 2px rgba(18, 18, 18, .4)
+}
+
+.TQTXToolbar[data-layout="landscape"] :first-child {
+  margin-left: 2px !important
+  margin-right: 4px !important;
+}
+
+.TQTXToolbar[data-layout="landscape"] >* {
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+}
+
+.TQTXToolbar[data-layout="portrait"] >* {
+  margin-top: 2px !important;
+}
+
+/* ########################################################################## */
+/* TQTXToolbarButton                                                          */
+/* ########################################################################## */
+
+.TQTXToolbarButton {
+  align-self: center;
+  padding: 2px;
+  color: #FFF; 
+  text-shadow: 0 -1px -1px rgba(0, 0, 0, .30)
+}
+
+.TQTXToolbarButton:active {
+  color: #BEBEBE
+}
+
+/* ########################################################################## */
+/* TQTXToolbarSeparator                                                       */
+/* ########################################################################## */
+
+.TQTXToolbarSeparator {
+  color: #FFF;
+  padding: 2px;
+  margin-left: 2px !important;
+  margin-right 2px !important;
+}
+
+/* ########################################################################## */
+/* TQTXSwitch                                                                 */
+/* ########################################################################## */
+
+.TQTXSwitch {
+  outline: none;
+  border-radius: var(--corner-radius);
+  -webkit-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+     -moz-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+       -o-box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+          box-shadow: inset 0 0 10px rgba(18, 18, 18, .9);
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--decorative-dark)), color-stop(100, var(--decorative-light))) !important;
+  background-image: -webkit-linear-gradient(top, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important;
+  background-image: -moz-linear-gradient(top, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important;
+  background-image: linear-gradient(to bottom, var(--decorative-dark) 0%, var(--decorative-light) 100%) !important;
+}
+
+.TQTXSwitchCaliper {
+  border: 1px solid #333;
+  background-color: var(--surface-control);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, var(--basic-white)), color-stop(1, var(--basic-light)));
+  background-image: -webkit-repeating-linear-gradient(top, var(--basic-white) 0%, var(--basic-light) 100%);
+  background-image: repeating-linear-gradient(to bottom, var(--basic-white) 0%, var(--basic-light) 100%);
+
+  border-radius: var(--corner-radius);
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-left: 2px solid rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  border-right: 2px solid rgba(0, 0, 0, 1);
+}
+
+/* ########################################################################## */
+/* TQTXProgress                                                            */
+/* ########################################################################## */
+
+.TQTXProgress {
+  padding: 2px;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, .9);
+  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, .9);
+  -o-box-shadow: inset 0 0 10px rgba(0, 0, 0, .9);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .9)
+}
+
+.TQTXProgressValue {
+  border-radius: var(--corner-radius);
+  background-color: rgba(255, 255, 255, .1);
+  -webkit-touch-callout: none;
+  -webkit-animation: move_bg_progressmeter 3s linear infinite;
+  -moz-animation: move_bg_progressmeter 3s linear infinite;
+  -o-animation: move_bg_progressmeter 3s linear infinite;
+
+  -webkit-background-size: 50px 50px;
+  -moz-background-size: 50px 50px;
+  -o-background-size: 50px 50px;
+
+  background-size: 50px 50px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .3)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .3)), color-stop(.75, rgba(255, 255, 255, .3)), color-stop(.75, transparent), to(transparent));
+  background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .3) 50%, rgba(255, 255, 255, .3) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient( -45deg, rgba(255, 255, 255, .3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .3) 50%, rgba(255, 255, 255, .3) 75%, transparent 75%, transparent)
+}
+
+@-webkit-keyframes move_bg_progressmeter {
+  0% {
+    background-position: 50px 50px
+  }
+  100% {
+    background-position: 0 0
+  }
+}
+
+@-moz-keyframes move_bg_progressmeter {
+  0% {
+    background-position: 50px 50px
+  }
+  100% {
+    background-position: 0 0
+  }
+}
+
+/* ########################################################################## */
+/* TQTXToolTipWindow                                                          */
+/* ########################################################################## */
+
+.TQTXToolTipWindow {
+  font-size: 14px;
+  border-radius: var(--corner-radius);
+  white-space: nowrap;
+  border-top: 1px solid rgba(44, 44, 44, .7);
+  border-left: 1px solid rgba(44, 44, 44, .7);
+  border-right: 1px solid rgba(44, 44, 44, .7);
+  border-bottom: 1px solid rgba(44, 44, 44, .7)
+
+  background-color: #FCFCCC !important;
+  background: #FCFCCC !important;
+
+  padding: 4px !important;
+  margin: 0px !important;
+}

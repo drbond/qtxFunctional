@@ -1,0 +1,27 @@
+{
+    "Name": "qtxFunctional",
+    "Author": "Kevin",
+    "Company": "educational-computing.co.uk",
+    "Target": "universal",
+    "Website": "https://educational-computing.co.uk/",
+    "Product": "DEFBFDFB-CA0D-49FF-8E00-FF53A5202191",
+    "License": "Open Source (MIT)",
+    "Note": "Functional programming framework for Quartex Pascal: higher-order functions (TFunction, TFn), lazy evaluation (TLazy, TLazyList), fused lazy sequences (TSequence, TFusion, TLazyInteger), persistent data structures (TImmutableList, TPersistentMap) and numerical applications (TVector, TMatrix, TFourier, TAutomaton, TNetwork) and functional computation graphs (TGraphNode, TFunctionGraph). Pure Object Pascal, no inline JavaScript. Units: functional.*",
+    "Version": {
+        "Major": "1",
+        "Minor": "1",
+        "Revision": "0",
+        "Build": "0",
+        "Name": "Release 1.1.0.0",
+        "Release": "2026-11-02T07:26:47Z",
+        "Note": "Adds functional.graph: inspectable, optimisable computation graphs (TGraphNode, TFunctionGraph) with a logged rewrite optimiser and single-pass fan-out execution"
+    },
+    "Dependencies": [
+        {
+            "Name": "RTL System package",
+            "Product": "344ebef2-e2de-11ef-ac34-064a74864f63",
+            "Constraints": ">=1.2.0.0",
+            "Note": "Uses qtx.sysutils only"
+        }
+    ]
+}

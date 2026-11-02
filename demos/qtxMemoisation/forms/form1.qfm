@@ -1,0 +1,122 @@
+﻿{
+  "class":"TProxyView",
+  "name":"Form1",
+  "visible":true,
+  "enabled":true,
+  "left":0,
+  "top":0,
+  "width":800,
+  "height":500,
+  "widget_unit":"qtx.dom.forms",
+  "widget_type":"TQTXForm",
+  "prototype":
+  [
+        {
+      "name":"DisplayMode",
+      "type":"TQTXWidgetDisplayMode",
+      "value":"4",
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"Enabled",
+      "type":"boolean",
+      "value":true,
+      "hasdefault":true,
+      "defaultvalue":true
+    }
+,
+    
+    {
+      "name":"Float",
+      "type":"TQTXWidgetFloat",
+      "value":"0",
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"height",
+      "type":"int32",
+      "value":500,
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"Left",
+      "type":"int32",
+      "value":0,
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"Name",
+      "type":"string",
+      "value":"Form1",
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"ParentFont",
+      "type":"boolean",
+      "value":true,
+      "hasdefault":true,
+      "defaultvalue":true
+    }
+,
+    
+    {
+      "name":"PositionMode",
+      "type":"TQTXWidgetPositionMode",
+      "value":"0",
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"Top",
+      "type":"int32",
+      "value":0,
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"TouchAction",
+      "type":"TQTXTouchAction",
+      "value":"1",
+      "hasdefault":false
+    }
+,
+    
+    {
+      "name":"Visible",
+      "type":"boolean",
+      "value":true,
+      "hasdefault":true,
+      "defaultvalue":true
+    }
+,
+    
+    {
+      "name":"width",
+      "type":"int32",
+      "value":800,
+      "hasdefault":false
+    }
+  ]
+,
+  "children":
+  [
+      ]
+,
+  "events":
+  [
+      ]
+,
+  "view_type":0
+}
